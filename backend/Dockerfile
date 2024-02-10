@@ -1,7 +1,7 @@
 FROM ruby:3.1.2
 
 RUN apt-get update -qq && \
-  apt-get install -y build-essentinal libpq-dev node.js
+  apt-get install -y build-essential libpq-dev node.js
 
 ENV APP_ROOT /yasai_pocket
 
