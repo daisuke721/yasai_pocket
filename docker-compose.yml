@@ -42,3 +42,4 @@ services:
 
 volumes:
   mysql-data:
+  node_modules:
