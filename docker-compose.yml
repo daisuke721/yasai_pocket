@@ -31,10 +31,12 @@ services:
     build:
       context: ./frontend/
       dockerfile: Dockerfile
-    command: bash -c "npm start"
+    command: bash -c "yarn start"
     volumes:
       - ./frontend:/usr/src/app:delegated
       - node_modules:/usr/src/app/node_modules/
+    environment:
+      - CHOKIDAR_USEPOLLING=true
     ports:
       - '3000:3000'
     stdin_open: true
