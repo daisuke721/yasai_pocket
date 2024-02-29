@@ -1,8 +1,9 @@
 
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div></div>
+    <div>
+    </div>
   );
 }
 
