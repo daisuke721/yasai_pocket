@@ -1,9 +1,13 @@
+import * as React from 'react'
 
+import { ChakraProvider, Box, Button } from '@chakra-ui/react'
 
 const App: React.FC = () => {
   return (
-    <div>
-    </div>
+      <ChakraProvider>
+        <Box px={10} my={10}>Hello</Box>
+        <Button colorScheme="green">Green button</Button>
+      </ChakraProvider>
   );
 }
 
