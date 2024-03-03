@@ -1,6 +1,7 @@
 import * as React from 'react'
 
-import { ChakraProvider, Box, Button, chakra, Container, Heading, HStack, Flex, Input } from '@chakra-ui/react'
+import { ChakraProvider, Box, Button, chakra, Container, Heading, HStack, Flex, Input, InputGroup, InputLeftElement, InputRightElement } from '@chakra-ui/react'
+import { SearchIcon } from '@chakra-ui/icons';
 
 const App: React.FC = () => {
   return (
@@ -11,10 +12,15 @@ const App: React.FC = () => {
               <Heading color={'white'}>App Title</Heading>
               <Flex>
                 <Box pr={4}>
-                  <Input bg={'white'} placeholder='商品を探す' />
-                </Box>
-                <Box>
-                  <Button>検索</Button>
+                  <InputGroup>
+                    <InputLeftElement pointerEvents={'none'}>
+                      <SearchIcon color={'gray.300'} />
+                    </InputLeftElement>
+                    <Input bg={'white'} placeholder='商品を探す' _placeholder={{ opacity: 1, color: "gray.400" }} />
+                    <InputRightElement width="4.5rem">
+                        <Button h="1.75rem" size="sm">検索</Button>
+                    </InputRightElement>
+                  </InputGroup>
                 </Box>
               </Flex>
             </HStack>
