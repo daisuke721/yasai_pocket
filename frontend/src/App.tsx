@@ -2,6 +2,7 @@ import * as React from 'react'
 
 import { ChakraProvider, Box, Button, chakra, Container, Heading, HStack, Flex, Input, InputGroup, InputLeftElement, InputRightElement, IconButton } from '@chakra-ui/react'
 import { HamburgerIcon, SearchIcon } from '@chakra-ui/icons';
+import { BsCart } from "react-icons/bs";
 
 const App: React.FC = () => {
   return (
@@ -25,6 +26,7 @@ const App: React.FC = () => {
                   </InputGroup>
                 </Box>
               </Flex>
+              <IconButton aria-label='カートボタン' icon={<BsCart />} variant="unstyled" />
               <IconButton aria-label='メニューボタン' icon={<HamburgerIcon />} variant="unstyled" />
             </HStack>
           </Container>
