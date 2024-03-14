@@ -1,10 +1,11 @@
 import * as React from 'react'
 
-import { ChakraProvider, Box, Button, chakra, Container, Heading, HStack, Flex, Input, InputGroup, InputLeftElement, InputRightElement, IconButton } from '@chakra-ui/react'
+import { ChakraProvider, Box, Button, chakra, Container, Heading, HStack, Flex, Input, InputGroup, InputLeftElement, InputRightElement, IconButton, Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerCloseButton, DrawerBody, useDisclosure } from '@chakra-ui/react'
 import { HamburgerIcon, SearchIcon } from '@chakra-ui/icons';
 import { BsCart } from "react-icons/bs";
 
 const App: React.FC = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
       <ChakraProvider>
         <chakra.header p={3} bg={'green.300'}>
@@ -27,9 +28,21 @@ const App: React.FC = () => {
                 </Box>
               </Flex>
               <IconButton aria-label='カートボタン' icon={<BsCart />} variant="unstyled" />
-              <IconButton aria-label='メニューボタン' icon={<HamburgerIcon />} variant="unstyled" />
+              <IconButton aria-label='メニューボタン' icon={<HamburgerIcon />} variant="unstyled" onClick={onOpen} />
             </HStack>
           </Container>
+          <Drawer placement='right' onClose={onClose} isOpen={isOpen}>
+            <DrawerOverlay>
+              <DrawerContent>
+                <DrawerHeader>メニュー画面</DrawerHeader>
+                <DrawerCloseButton />
+                <DrawerBody>
+                  <Button w='100%'>新規登録</Button>
+                  <Button w='100%'>ログイン</Button>
+                </DrawerBody>
+              </DrawerContent>
+            </DrawerOverlay>
+          </Drawer>
         </chakra.header>
         <Box>TOPページ</Box>
       </ChakraProvider>
