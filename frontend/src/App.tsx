@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { ChakraProvider, Box, Button, chakra, Container, Heading, HStack, Flex, Input, InputGroup, InputLeftElement, InputRightElement, IconButton, Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerCloseButton, DrawerBody, useDisclosure } from '@chakra-ui/react'
+import { ChakraProvider, Box, Button, chakra, Container, Heading, HStack, Flex, Input, InputGroup, InputLeftElement, InputRightElement, IconButton, Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerCloseButton, DrawerBody, useDisclosure, Center } from '@chakra-ui/react'
 import { HamburgerIcon, SearchIcon } from '@chakra-ui/icons';
 import { BsCart } from "react-icons/bs";
 
@@ -45,6 +45,9 @@ const App: React.FC = () => {
           </Drawer>
         </chakra.header>
         <Box>TOPページ</Box>
+        <chakra.footer p='50px' bg='green.300'>
+          <Center color='white'>©yasai pocket</Center>
+        </chakra.footer>
       </ChakraProvider>
   );
 }
