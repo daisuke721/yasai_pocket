@@ -5,8 +5,8 @@ interface Props {
 }
 
 export const PrimaryButton: React.FC<Props> = (props) => {
-  // const { children } = props;
+  const { children } = props;
   return (
-    <Button colorScheme='blue' variant='solid'></Button>
+    <Button colorScheme='blue' variant='solid'>{children}</Button>
   )
 }
