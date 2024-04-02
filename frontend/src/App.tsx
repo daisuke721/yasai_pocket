@@ -4,6 +4,7 @@ import { ChakraProvider, Button, Heading, Input, InputGroup, InputLeftElement, I
 import { HamburgerIcon, SearchIcon } from '@chakra-ui/icons';
 import { BsCart } from "react-icons/bs";
 
+import { PrimaryButton } from './components/atoms/button/PrimaryButton';
 import theme from './theme/theme';
 
 const App: React.FC = () => {
@@ -43,7 +44,11 @@ const App: React.FC = () => {
             </Drawer>
         </Grid>
         <Grid>
-          <GridItem>TOPページ</GridItem>
+          <GridItem>
+            TOPページ
+            <PrimaryButton>aaa</PrimaryButton>
+          </GridItem>
+
         </Grid>
         <Grid as='footer' bg='orange.300' h='100px'>
           <GridItem p='35px'>
