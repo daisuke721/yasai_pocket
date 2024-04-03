@@ -1,6 +1,6 @@
 import { Button } from "@chakra-ui/react"
 
-interface Props {
+type Props = {
   children?: React.ReactNode;
 }
 
