@@ -1,4 +1,4 @@
-import { Button, Center, Grid, GridItem, Heading, Input, InputGroup, InputLeftElement, InputRightElement, useDisclosure } from "@chakra-ui/react";
+import { Button, Grid, GridItem, Heading, Input, InputGroup, InputLeftElement, InputRightElement, useDisclosure } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
 
 import { CartIconButton } from "../../atoms/button/CartIconButton";
@@ -31,17 +31,12 @@ export const Header: React.FC = () => {
         </GridItem>
         <MenuDrawer onClose={onClose} isOpen={isOpen} />
       </Grid>
-        <Grid>
-          <GridItem>
-            TOPページ
-            <PrimaryButton>aaa</PrimaryButton>
-          </GridItem>
-        </Grid>
-        <Grid as='footer' bg='orange.300' h='100px'>
-          <GridItem p='35px'>
-            <Center color='white'>©yasai pocket</Center>
-          </GridItem>
-        </Grid>
+      <Grid>
+        <GridItem>
+          TOPページ
+          <PrimaryButton>aaa</PrimaryButton>
+        </GridItem>
+      </Grid>
     </>
   )
 }
