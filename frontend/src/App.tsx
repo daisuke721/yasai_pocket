@@ -1,5 +1,6 @@
 import * as React from 'react'
 
+import { BrowserRouter} from 'react-router-dom';
 import { ChakraProvider, Button, Heading, Input, InputGroup, InputLeftElement, InputRightElement, Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerCloseButton, DrawerBody, useDisclosure, Center, Grid, GridItem } from '@chakra-ui/react'
 import { SearchIcon } from '@chakra-ui/icons';
 
@@ -8,11 +9,15 @@ import { PrimaryButton } from './components/atoms/button/PrimaryButton';
 import { CartIconButton } from './components/atoms/button/CartIconButton';
 import { MenuIconButton } from './components/atoms/button/MenuIconButton';
 import theme from './theme/theme';
+import { Router } from './router/Router';
+
 
 const App: React.FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-      <ChakraProvider theme={theme}>
+    <ChakraProvider theme={theme}>
+      <BrowserRouter>
+        <Router />
         <Grid as='header' templateColumns='150px repeat(2, 1fr) 80px' gap={10} h='100px' p='25px' bg='orange.300'>
               <GridItem as='a' _hover={{ cursor: 'pointer' }}>
                 <Heading as='h1' textAlign='center' color='white'>App Title</Heading>
@@ -50,14 +55,14 @@ const App: React.FC = () => {
             TOPページ
             <PrimaryButton>aaa</PrimaryButton>
           </GridItem>
-
         </Grid>
         <Grid as='footer' bg='orange.300' h='100px'>
           <GridItem p='35px'>
             <Center color='white'>©yasai pocket</Center>
           </GridItem>
         </Grid>
-      </ChakraProvider>
+      </BrowserRouter>
+    </ChakraProvider>
   );
 }
 
