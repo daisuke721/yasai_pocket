@@ -38,6 +38,7 @@ module.exports = {
         "react/react-in-jsx-scope": "off",
         "react/prop-types": "off",
         "@typescript-eslint/consistent-type-definitions": "off",
+        "@typescript-eslint/non-nullable-type-assertion-style": "off",
     },
     ignorePatterns: [
         "build/",
