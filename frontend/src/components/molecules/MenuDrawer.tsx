@@ -1,4 +1,5 @@
-import { Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay } from "@chakra-ui/react"
+import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Heading } from "@chakra-ui/react"
+import { Link } from "react-router-dom";
 
 type Props = {
   onClose: () => void;
@@ -14,8 +15,24 @@ export const MenuDrawer: React.FC<Props> = (props) => {
           <DrawerHeader>メニュー画面</DrawerHeader>
           <DrawerCloseButton />
           <DrawerBody>
-            <Button w='100%'>新規登録</Button>
-            <Button w='100%'>ログイン</Button>
+            <Box>
+              <Heading as='h5'>ユーザーの方</Heading>
+              <Link to="/usersignup">
+                <Button w='100%'>サインアップ</Button>
+              </Link>
+              <Link to="/usersignin">
+                <Button w='100%'>サインイン</Button>
+              </Link>
+            </Box>
+            <Box>
+              <Heading as='h5'>管理者の方</Heading>
+              <Link to="/adminsignup">
+                <Button w='100%'>サインアップ</Button>
+              </Link>
+              <Link to="/adminsignin">
+                <Button w='100%'>サインイン</Button>
+              </Link>
+            </Box>
           </DrawerBody>
         </DrawerContent>
       </DrawerOverlay>
