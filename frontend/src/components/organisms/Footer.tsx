@@ -1,11 +1,9 @@
-import { Center, Grid, GridItem } from "@chakra-ui/react"
+import { Center, Flex } from "@chakra-ui/react"
 
 export const Footer: React.FC = () => {
   return (
-    <Grid as='footer' bg='orange.300' h='100px'>
-      <GridItem p='35px'>
-        <Center color='white'>©yasai pocket</Center>
-      </GridItem>
-    </Grid>
+    <Flex as='footer' justify='center' minWidth='max-content' h='100px' bg='gray.600'>
+      <Center color='white'>©yasai pocket</Center>
+    </Flex>
   )
 }
