@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
-import { Footer } from "../organisms/layout/Footer";
-import { Header } from "../organisms/layout/Header";
+import { Footer } from "../organisms/Footer";
+import { Header } from "../organisms/Header";
 
 export const Home: React.FC = () => {
   return(

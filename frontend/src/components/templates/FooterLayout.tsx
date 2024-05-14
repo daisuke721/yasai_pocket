@@ -1,6 +1,6 @@
 import type { ReactNode } from "react"
 
-import { Footer } from "../organisms/layout/Footer";
+import { Footer } from "../organisms/Footer";
 
 type Props = {
   children: ReactNode;
