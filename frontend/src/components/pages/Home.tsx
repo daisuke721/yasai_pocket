@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
-import { Footer } from "../organisms/Footer";
-import { Header } from "../organisms/Header";
+import { HeaderTemplate } from "../templates/HeaderTemplate";
+import { FooterTemplate } from "../templates/FooterTemplate";
 
 export const Home: React.FC = () => {
   return(
     <>
-      <Header />
+      <HeaderTemplate />
       <div>
         <p>topページ</p>
       </div>
@@ -16,7 +16,7 @@ export const Home: React.FC = () => {
       <div>
         <Link to="/productlist">商品一覧ページへ</Link>
       </div>
-      <Footer />
+      <FooterTemplate/>
     </>
   )
 }

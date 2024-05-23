@@ -1,5 +1,5 @@
 import { IconButton } from "@chakra-ui/react";
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { AiOutlineMenu } from "react-icons/ai";
 
 
 type Props = {
@@ -9,6 +9,6 @@ type Props = {
 export const MenuIconButton: React.FC<Props> = (props) => {
   const { onOpen } = props
   return (
-    <IconButton aria-label='メニューボタン' icon={<HamburgerIcon />} variant='unstyled' onClick={onOpen} />
+    <IconButton aria-label='メニューボタン' icon={<AiOutlineMenu />} variant='unstyled' onClick={onOpen} />
   )
 }

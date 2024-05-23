@@ -9,7 +9,7 @@ import { SearchInputButton } from "../molecules/SearchInputButton";
 export const Header: React.FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Flex as='header' justify='center' minWidth='max-content' h='100px' alignItems='center' gap='2' bg='gray.300'>
+    <Flex as='header' justify='center' minWidth='max-content' h='100px' alignItems='center' bg='gray.300'>
       <Box p='35px'>
         <Link to="/">
           <Heading as='h1' textAlign='center' color='white'>App Title</Heading>

@@ -14,12 +14,14 @@ export const SearchInputButton: React.FC = () => {
   }
 
   return (
-    <InputGroup w='300px'>
-      <InputLeftElement pointerEvents='none'>
-        <SearchIcon color='gray.300' />
-      </InputLeftElement>
-      <Input borderRadius='10px' bg='white' outline='none' placeholder='商品を探す' _placeholder={{ opacity: 1, color: "gray.400" }} value={searchTerm} onChange={handleInputChange} />
-      <Button color='gray' colorScheme='gray' borderRadius='10px' marginLeft='5px' onClick={handleSearch}>検索</Button>
-    </InputGroup>
+    <>
+      <InputGroup w='300px'>
+        <InputLeftElement pointerEvents='none'>
+          <SearchIcon color='gray.300' />
+        </InputLeftElement>
+        <Input borderRadius='10px' bg='white' placeholder='商品を探す' _placeholder={{ opacity: 1, color: "gray.400" }} value={searchTerm} onChange={handleInputChange} />
+        <Button color='gray' colorScheme='gray' borderRadius='10px' marginLeft='5px' onClick={handleSearch}>検索</Button>
+      </InputGroup>
+    </>
   )
 }

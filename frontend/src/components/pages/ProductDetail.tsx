@@ -1,9 +1,10 @@
-import { Header } from "../organisms/Header"
+import { HeaderTemplate } from "../templates/HeaderTemplate"
+
 
 export const ProductDetail: React.FC = () => {
   return (
     <>
-      <Header />
+      <HeaderTemplate />
       <div>
         <p>商品詳細ページの編集</p>
       </div>

@@ -1,8 +1,8 @@
 import { IconButton } from "@chakra-ui/react"
-import { BsCart } from "react-icons/bs"
+import { HiShoppingCart } from "react-icons/hi";
 
 export const CartIconButton: React.FC = () => {
   return (
-    <IconButton aria-label='カートボタン' icon={<BsCart />} variant='unstyled' />
+    <IconButton aria-label='カートボタン' icon={<HiShoppingCart />} variant='unstyled' />
   )
 }
