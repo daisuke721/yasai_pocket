@@ -2,7 +2,7 @@ import { useState } from "react"
 import { SearchIcon } from "@chakra-ui/icons"
 import { Button, Input, InputGroup, InputLeftElement } from "@chakra-ui/react"
 
-export const SearchInputButton: React.FC = () => {
+export const SearchInputGroup: React.FC = () => {
   const [ searchTerm, setSearchTerm ] = useState('');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -15,7 +15,7 @@ export const SearchInputButton: React.FC = () => {
 
   return (
     <>
-      <InputGroup w='300px'>
+      <InputGroup w={{ base: '100%', md: '400px' }}>
         <InputLeftElement pointerEvents='none'>
           <SearchIcon color='gray.300' />
         </InputLeftElement>

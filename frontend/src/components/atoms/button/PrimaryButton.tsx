@@ -1,12 +1,14 @@
-import { Button } from "@chakra-ui/react"
+import { Button } from '@chakra-ui/react';
 
-type Props = {
-  children: React.ReactNode;
-}
+type ButtonProps = {
+  onClick: () => void;
+  label: string;
+};
 
-export const PrimaryButton: React.FC<Props> = (props) => {
-  const { children } = props;
+export const PrimaryButton: React.FC<ButtonProps> = ({ onClick, label }) => {
   return (
-    <Button>{children}</Button>
-  )
-}
+    <Button colorScheme="gray" borderRadius="10px" marginLeft="5px" onClick={onClick}>
+      {label}
+    </Button>
+  );
+};
