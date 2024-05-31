@@ -20,13 +20,13 @@ export const Header: React.FC = () => {
         <Box p='10px'>
           <SearchInputGroup />
         </Box>
-        <Flex>
-          <Box display="flex" pr={{ base: "10px", md: "15px" }}>
+        <Flex alignItems="center">
+          <Box display="flex" p={{ base: "10px", md: "15px" }}>
             <Link to="/cart">
               <CartIconButton />
             </Link>
           </Box>
-          <Box pr='15px' display={{ base: 'block', md: 'flex' }}>
+          <Box display="flex" p={{ base: "10px", md: "15px" }}>
             <MenuIconButton onOpen={onOpen} />
           </Box>
           <MenuDrawer onClose={onClose} isOpen={isOpen} />
