@@ -14,4 +14,4 @@ back:
 	docker-compose exec backend bash
 
 down:
-	docker-compsoe down -v
+	docker-compose down -v
