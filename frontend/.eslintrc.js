@@ -39,6 +39,7 @@ module.exports = {
         "react/prop-types": "off",
         "@typescript-eslint/consistent-type-definitions": "off",
         "@typescript-eslint/non-nullable-type-assertion-style": "off",
+        "@typescript-eslint/triple-slash-reference": "off",
     },
     ignorePatterns: [
         "build/",
@@ -48,4 +49,9 @@ module.exports = {
         ".*lintrc.js",
         "/*.*"
     ],
+    settings: {
+        react: {
+            version: "detect"
+        }
+    }
 }
